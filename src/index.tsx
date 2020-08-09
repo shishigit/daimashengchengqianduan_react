@@ -7,7 +7,7 @@ function App()
 {
     return (
         <div>
-            <Dengluye shuxing={'ffffffffffff'}/>
+            <Dengluye shuxing={'dddddddddddddddd'}/>
         </div>
     );
 }

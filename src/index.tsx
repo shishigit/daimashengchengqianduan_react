@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {Dengluye} from "./page/Dengluye";
 
+
 function App()
 {
     return (
-        <div>
+        <div style={{height: '100%'}}>
             <Dengluye shuxing={'dddddddddddddddd'}/>
         </div>
     );
 }
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+ReactDOM.render(<App/>, document.getElementById('root'));

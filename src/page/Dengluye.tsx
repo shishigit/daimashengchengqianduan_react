@@ -1,5 +1,6 @@
 import {Button} from "antd";
 import React from "react";
+import './Dengluye.css'
 
 interface shuxing
 {
@@ -17,11 +18,9 @@ export class Dengluye extends React.Component<shuxing, zhuangtai>
     render(): React.ReactNode
     {
         return (
-            <div>
+            <div className='beijing'>
                 <br/>
-                <br/>
-
-                <Button type="primary" style={{width: 300, color: 'black'}}>Button</Button>
+                <Button type="primary">Button</Button>
             </div>
         )
     }

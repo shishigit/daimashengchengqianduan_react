@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Dengluye} from "./page/Dengluye";
+import {Dengluye} from "./page/dengluye/Dengluye";
 
 
 function App()

@@ -10,16 +10,33 @@ interface shuxing
 
 interface zhuangtai
 {
-    zhuangai: number
+    dengluxinxi: {
+        zhanghao: string,
+        mima: string
+    }
 }
 
 export class Dengluye extends React.Component<shuxing, zhuangtai>
 {
-
-    dengluxinxi = {
-        zhanghao: 'ceshi',
-        mima: 'ceshi'
+    constructor(props: shuxing)
+    {
+        super(props);
+        this.state = {
+            dengluxinxi: {
+                zhanghao: 'ceshi',
+                mima: 'ceshi'
+            }
+        }
     }
+
+    componentDidMount(): void
+    {
+        setInterval(() =>
+        {
+            console.log(this.state.dengluxinxi)
+        }, 2000)
+    }
+
 
     render(): React.ReactNode
     {
@@ -27,16 +44,27 @@ export class Dengluye extends React.Component<shuxing, zhuangtai>
             <div className='beijing'>
                 <Card
                     style={{width: 300}}
-                    actions={[<Button type="primary" style={{width: '95%'}}>登录</Button>]}
+                    actions={[<Button type="primary" style={{width: '95%'}} onClick={event =>
+                    {
+
+                    }}>登录</Button>]}
                 >
                     <Meta title="测试" description="测试测试测试"/>
 
                     <Form labelCol={{span: 4}} wrapperCol={{span: 20}} style={{marginTop: '50px'}}>
                         <Form.Item label="帐号">
-                            <Input value={this.dengluxinxi.zhanghao}/>
+                            <Input value={this.state.dengluxinxi.zhanghao} onChange={(event) =>
+                            {
+                                this.state.dengluxinxi.zhanghao = event.target.value
+                                this.setState({...this.state})
+                            }}/>
                         </Form.Item>
                         <Form.Item label="密码">
-                            <Input.Password value={this.dengluxinxi.mima}/>
+                            <Input.Password value={this.state.dengluxinxi.mima} onChange={(event) =>
+                            {
+                                this.state.dengluxinxi.mima = event.target.value
+                                this.setState({...this.state})
+                            }}/>
                         </Form.Item>
                     </Form>
                 </Card>

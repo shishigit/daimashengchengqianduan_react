@@ -1,13 +1,8 @@
 import {Button, Card, Form, Input} from "antd";
-import React, {CSSProperties} from "react";
+import React from "react";
 import Meta from "antd/es/card/Meta";
-import {browserHistory} from "../gongju/gongju";
-
-const beijing: CSSProperties = {
-    background: 'url("beijing.beijing.png")',
-    height: '100%',
-    padding: '20%'
-}
+import {browserHistory} from "../../gongju/gongju";
+import css from './dengluye.module.css'
 
 export class DengluyeYemian extends React.Component<any, any>
 {
@@ -19,7 +14,7 @@ export class DengluyeYemian extends React.Component<any, any>
     render(): React.ReactNode
     {
         return (
-            <div style={beijing}>
+            <div className={css.beijing}>
                 <Card
                     style={{width: 300}}
                     actions={[

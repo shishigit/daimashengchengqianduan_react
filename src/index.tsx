@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {DengluyeYemian} from "./page/dengluye.yemian";
+import {DengluyeYemian} from "./page/dengluye/dengluye.yemian";
 import {ZhuyeYemian} from "./page/zhuye.yemian";
 import {browserHistory} from "./gongju/gongju";
 import {Router, Switch, Redirect, Route} from 'react-router-dom';

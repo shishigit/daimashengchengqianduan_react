@@ -46,7 +46,7 @@ export class Dengluye extends React.Component<shuxing, zhuangtai>
                     style={{width: 300}}
                     actions={[<Button type="primary" style={{width: '95%'}} onClick={event =>
                     {
-
+                        history.pushState('/zhuye', '33333333333')
                     }}>登录</Button>]}
                 >
                     <Meta title="测试" description="测试测试测试"/>

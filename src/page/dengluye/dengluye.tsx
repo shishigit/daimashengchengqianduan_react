@@ -1,6 +1,6 @@
 import {Button, Card, Form, Input} from "antd";
 import React from "react";
-import './Dengluye.css'
+import css from './dengluye.module.css'
 import Meta from "antd/es/card/Meta";
 import {browserHistory} from "../../gongju/gongju";
 
@@ -14,7 +14,7 @@ export class Dengluye extends React.Component<any, any>
     render(): React.ReactNode
     {
         return (
-            <div className='beijing'>
+            <div className={css.beijing}>
                 <Card
                     style={{width: 300}}
                     actions={[

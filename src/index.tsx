@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Dengluye} from "./page/dengluye/Dengluye";
+import {Dengluye} from "./page/dengluye/dengluye";
 import {Zhuye} from "./page/zhuye/zhuye";
 import {browserHistory} from "./gongju/gongju";
 import {Router, Switch, Redirect, Route} from 'react-router-dom';

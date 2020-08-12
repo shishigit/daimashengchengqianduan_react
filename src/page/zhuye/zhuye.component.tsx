@@ -6,7 +6,7 @@ import css from './zhuye.module.css'
 const {Header, Content, Footer, Sider} = Layout;
 const {SubMenu} = Menu;
 
-export class Zhuye extends React.Component<any, any>
+export class ZhuyeComponent extends React.Component<any, any>
 {
     state = {
         collapsed: false,

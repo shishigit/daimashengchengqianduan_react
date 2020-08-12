@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Dengluye} from "./page/dengluye/dengluye";
-import {Zhuye} from "./page/zhuye/zhuye";
+import {ZhuyeComponent} from "./page/zhuye/zhuye.component";
 import {browserHistory} from "./gongju/gongju";
 import {Router, Switch, Redirect, Route} from 'react-router-dom';
 
@@ -14,7 +14,7 @@ export class App extends React.Component<any, any>
             <Router history={browserHistory}>
                 <Switch>
                     <Route path='/dengluye' component={Dengluye} exact={true}/>
-                    <Route path='/zhuye' component={Zhuye} exact={true}/>
+                    <Route path='/zhuye' component={ZhuyeComponent} exact={true}/>
                     <Redirect to={'/dengluye'}/>
                 </Switch>
             </Router>

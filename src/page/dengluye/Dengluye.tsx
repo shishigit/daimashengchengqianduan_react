@@ -2,11 +2,8 @@ import {Button, Card, Form, Input} from "antd";
 import React from "react";
 import './Dengluye.css'
 import Meta from "antd/es/card/Meta";
+import {browserHistory} from "../../gongju/gongju";
 
-interface shuxing
-{
-    shuxing: string
-}
 
 interface zhuangtai
 {
@@ -16,9 +13,9 @@ interface zhuangtai
     }
 }
 
-export class Dengluye extends React.Component<shuxing, zhuangtai>
+export class Dengluye extends React.Component<any, zhuangtai>
 {
-    constructor(props: shuxing)
+    constructor(props: any)
     {
         super(props);
         this.state = {
@@ -29,24 +26,15 @@ export class Dengluye extends React.Component<shuxing, zhuangtai>
         }
     }
 
-    componentDidMount(): void
-    {
-        setInterval(() =>
-        {
-            console.log(this.state.dengluxinxi)
-        }, 2000)
-    }
-
-
     render(): React.ReactNode
     {
         return (
             <div className='beijing'>
                 <Card
                     style={{width: 300}}
-                    actions={[<Button type="primary" style={{width: '95%'}} onClick={event =>
+                    actions={[<Button type="primary" style={{width: '95%'}} onClick={() =>
                     {
-                        history.pushState('/zhuye', '33333333333')
+                        browserHistory.push('/zhuye')
                     }}>登录</Button>]}
                 >
                     <Meta title="测试" description="测试测试测试"/>

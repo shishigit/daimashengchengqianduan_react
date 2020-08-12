@@ -34,6 +34,7 @@ export class Dengluye extends React.Component<any, zhuangtai>
                     style={{width: 300}}
                     actions={[<Button type="primary" style={{width: '95%'}} onClick={() =>
                     {
+                        // window.location.href = '/zhuye'
                         browserHistory.push('/zhuye')
                     }}>登录</Button>]}
                 >

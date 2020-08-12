@@ -1,10 +1,15 @@
 import {Button, Card, Form, Input} from "antd";
-import React from "react";
-import css from './dengluye.module.css'
+import React, {CSSProperties} from "react";
 import Meta from "antd/es/card/Meta";
-import {browserHistory} from "../../gongju/gongju";
+import {browserHistory} from "../gongju/gongju";
 
-export class DengluyeComponent extends React.Component<any, any>
+const beijing: CSSProperties = {
+    background: 'url("beijing.beijing.png")',
+    height: '100%',
+    padding: '20%'
+}
+
+export class DengluyeYemian extends React.Component<any, any>
 {
     private dengluxinxi = {
         zhanghao: 'ceshi',
@@ -14,7 +19,7 @@ export class DengluyeComponent extends React.Component<any, any>
     render(): React.ReactNode
     {
         return (
-            <div className={css.beijing}>
+            <div style={beijing}>
                 <Card
                     style={{width: 300}}
                     actions={[

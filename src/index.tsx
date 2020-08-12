@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {DengluyeComponent} from "./page/dengluye/dengluye.component";
-import {ZhuyeComponent} from "./page/zhuye/zhuye.component";
+import {DengluyeYemian} from "./page/dengluye.yemian";
+import {ZhuyeYemian} from "./page/zhuye.yemian";
 import {browserHistory} from "./gongju/gongju";
 import {Router, Switch, Redirect, Route} from 'react-router-dom';
 
@@ -13,8 +13,8 @@ export class App extends React.Component<any, any>
         return (
             <Router history={browserHistory}>
                 <Switch>
-                    <Route path='/dengluye' component={DengluyeComponent} exact={true}/>
-                    <Route path='/zhuye' component={ZhuyeComponent} exact={true}/>
+                    <Route path='/dengluye' component={DengluyeYemian} exact={true}/>
+                    <Route path='/zhuye' component={ZhuyeYemian} exact={true}/>
                     <Redirect to={'/dengluye'}/>
                 </Switch>
             </Router>

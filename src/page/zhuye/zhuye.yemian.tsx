@@ -1,31 +1,22 @@
-import React, {CSSProperties} from "react";
+import React from "react";
 import {Layout, Menu, Breadcrumb} from 'antd';
 
-const yangshi: CSSProperties = {
-    height: '32px',
-    background: 'rgba(255, 255, 255, 0.2)',
-    margin: '16px'
-}
+import css from './zhuye.module.css'
 
 export class ZhuyeYemian extends React.Component<any, any>
 {
-    state = {
-        collapsed: false,
-    };
-
-
-    onCollapse = (collapsed: any) =>
-    {
-        console.log(collapsed);
-        this.setState({collapsed});
-    };
+    private collapsed = false
 
     render()
     {
         return (
             <Layout style={{minHeight: '100vh'}}>
-                <Layout.Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
-                    <div style={yangshi}/>
+                <Layout.Sider collapsible collapsed={this.state.collapsed} onCollapse={collapsed =>
+                {
+                    this.collapsed = collapsed;
+                    this.setState({})
+                }}>
+                    <div className={css.logo}/>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                         <Menu.Item key="1">
                             Option 1

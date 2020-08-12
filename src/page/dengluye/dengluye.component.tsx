@@ -4,7 +4,7 @@ import css from './dengluye.module.css'
 import Meta from "antd/es/card/Meta";
 import {browserHistory} from "../../gongju/gongju";
 
-export class Dengluye extends React.Component<any, any>
+export class DengluyeComponent extends React.Component<any, any>
 {
     private dengluxinxi = {
         zhanghao: 'ceshi',

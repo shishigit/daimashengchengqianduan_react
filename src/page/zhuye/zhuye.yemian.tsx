@@ -2,7 +2,7 @@ import React from "react";
 import {Layout, Menu, Breadcrumb} from 'antd';
 import css from './zhuye.module.css'
 
-export class ZhuyeYemian extends React.Component<any, any>
+export class ZhuyeYemian extends React.Component<{}, {}>
 {
     private collapsed = false
 
@@ -10,7 +10,7 @@ export class ZhuyeYemian extends React.Component<any, any>
     {
         return (
             <Layout style={{minHeight: '100vh'}}>
-                <Layout.Sider collapsible collapsed={this.state.collapsed} onCollapse={collapsed =>
+                <Layout.Sider collapsible collapsed={this.collapsed} onCollapse={collapsed =>
                 {
                     this.collapsed = collapsed;
                     this.setState({})

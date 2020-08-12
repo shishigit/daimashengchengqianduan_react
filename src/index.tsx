@@ -13,7 +13,7 @@ export class App extends React.Component<any, any>
         return (
             <Router history={browserHistory}>
                 <Switch>
-                    <Route path='/dengluye'>
+                    <Route path='/dengluye' >
                         <Dengluye/>
                     </Route>
                     <Route path='/zhuye'>

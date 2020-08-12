@@ -19,9 +19,7 @@ export class App extends React.Component<any, any>
                     <Route path='/zhuye'>
                         <Zhuye/>
                     </Route>
-                    <Route path={'/'}>
-                        <Redirect to={'/dengluye'}/>
-                    </Route>
+                    <Redirect to={'/dengluye'}/>
                 </Switch>
             </Router>
         );

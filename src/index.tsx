@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Dengluye} from "./page/dengluye/Dengluye";
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch, Router} from 'react-router-dom';
 import {Zhuye} from "./page/zhuye/zhuye";
+import {browserHistory} from "./gongju/gongju";
 
 export class App extends React.Component<any, any>
 {
@@ -11,16 +12,20 @@ export class App extends React.Component<any, any>
     {
         return (
             <div style={{height: '100%'}}>
-                <BrowserRouter>
-                    <Switch>
-                        <Route path='/dengluye'>
-                            <Dengluye/>
-                        </Route>
-                        <Route path='/zhuye'>
-                            <Zhuye/>
-                        </Route>
-                        <Redirect to={'/dengluye'}/>
-                    </Switch>
+                <BrowserRouter basename='/'>
+                    <Router history={browserHistory}>
+                        <Switch>
+                            <Route path='/dengluye'>
+                                <Dengluye/>
+                            </Route>
+                            <Route path='/zhuye'>
+                                <Zhuye/>
+                            </Route>
+                            <Route path={'/'}>
+                                <Redirect to={'/dengluye'}/>
+                            </Route>
+                        </Switch>
+                    </Router>
                 </BrowserRouter>
             </div>
         );

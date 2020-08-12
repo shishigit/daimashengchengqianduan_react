@@ -4,26 +4,11 @@ import './Dengluye.css'
 import Meta from "antd/es/card/Meta";
 import {browserHistory} from "../../gongju/gongju";
 
-
-interface zhuangtai
+export class Dengluye extends React.Component<any, any>
 {
-    dengluxinxi: {
-        zhanghao: string,
-        mima: string
-    }
-}
-
-export class Dengluye extends React.Component<any, zhuangtai>
-{
-    constructor(props: any)
-    {
-        super(props);
-        this.state = {
-            dengluxinxi: {
-                zhanghao: 'ceshi',
-                mima: 'ceshi'
-            }
-        }
+    private dengluxinxi = {
+        zhanghao: 'ceshi',
+        mima: 'ceshi'
     }
 
     render(): React.ReactNode
@@ -43,17 +28,17 @@ export class Dengluye extends React.Component<any, zhuangtai>
 
                     <Form labelCol={{span: 4}} wrapperCol={{span: 20}} style={{marginTop: '50px'}}>
                         <Form.Item label="帐号">
-                            <Input value={this.state.dengluxinxi.zhanghao} onChange={(event) =>
+                            <Input value={this.dengluxinxi.zhanghao} onChange={(event) =>
                             {
-                                this.state.dengluxinxi.zhanghao = event.target.value
-                                this.setState({...this.state})
+                                this.dengluxinxi.zhanghao = event.target.value
+                                this.setState({})
                             }}/>
                         </Form.Item>
                         <Form.Item label="密码">
-                            <Input.Password value={this.state.dengluxinxi.mima} onChange={(event) =>
+                            <Input.Password value={this.dengluxinxi.mima} onChange={(event) =>
                             {
-                                this.state.dengluxinxi.mima = event.target.value
-                                this.setState({...this.state})
+                                this.dengluxinxi.mima = event.target.value
+                                this.setState({})
                             }}/>
                         </Form.Item>
                     </Form>

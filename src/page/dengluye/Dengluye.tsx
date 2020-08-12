@@ -32,11 +32,12 @@ export class Dengluye extends React.Component<any, zhuangtai>
             <div className='beijing'>
                 <Card
                     style={{width: 300}}
-                    actions={[<Button type="primary" style={{width: '95%'}} onClick={() =>
-                    {
-                        // window.location.href = '/zhuye'
-                        browserHistory.push('/zhuye')
-                    }}>登录</Button>]}
+                    actions={[
+                        <Button type="primary" style={{width: '95%'}}
+                                onClick={() => browserHistory.push('/zhuye')}>
+                            登录
+                        </Button>
+                    ]}
                 >
                     <Meta title="测试" description="测试测试测试"/>
 

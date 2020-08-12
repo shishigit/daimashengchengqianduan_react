@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Dengluye} from "./page/dengluye/Dengluye";
-import {Redirect, Route, Switch, Router} from 'react-router-dom';
 import {Zhuye} from "./page/zhuye/zhuye";
 import {browserHistory} from "./gongju/gongju";
+import {Router, Switch, Route, Redirect} from 'react-router-dom';
 
 export class App extends React.Component<any, any>
 {
@@ -13,7 +13,7 @@ export class App extends React.Component<any, any>
         return (
             <Router history={browserHistory}>
                 <Switch>
-                    <Route path='/dengluye' >
+                    <Route path='/dengluye'>
                         <Dengluye/>
                     </Route>
                     <Route path='/zhuye'>

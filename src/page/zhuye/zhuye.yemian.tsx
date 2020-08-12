@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout, Menu, Breadcrumb} from 'antd';
+import {Layout, Menu} from 'antd';
 import css from './zhuye.module.css'
 
 export class ZhuyeYemian extends React.Component<{}, {}>
@@ -10,11 +10,13 @@ export class ZhuyeYemian extends React.Component<{}, {}>
     {
         return (
             <Layout style={{minHeight: '100vh'}}>
-                <Layout.Sider collapsible collapsed={this.collapsed} onCollapse={collapsed =>
-                {
-                    this.collapsed = collapsed;
-                    this.setState({})
-                }}>
+                <Layout.Sider collapsible
+                              collapsed={this.collapsed}
+                              onCollapse={collapsed =>
+                              {
+                                  this.collapsed = collapsed;
+                                  this.setState({})
+                              }}>
                     <div className={css.logo}/>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                         <Menu.Item key="1">
@@ -32,16 +34,12 @@ export class ZhuyeYemian extends React.Component<{}, {}>
                             <Menu.Item key="6">Team 1</Menu.Item>
                             <Menu.Item key="8">Team 2</Menu.Item>
                         </Menu.SubMenu>
-                        <Menu.Item key="9"/>
                     </Menu>
                 </Layout.Sider>
                 <Layout>
                     <Layout.Header style={{padding: 0, background: '#fff'}}/>
                     <Layout.Content style={{margin: '0 16px'}}>
-                        <Breadcrumb style={{margin: '16px 0'}}>
-                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                        </Breadcrumb>
+                        <div style={{margin: '16px 0'}}/>
                         <div style={{padding: 24, minHeight: 360, background: '#fff'}}>
                             Bill is a cat.
                         </div>

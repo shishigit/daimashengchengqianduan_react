@@ -16,7 +16,8 @@ export class ZhuyeYemian extends React.Component<{}, {}>
                               {
                                   this.collapsed = collapsed;
                                   this.setState({})
-                              }}>
+                              }}
+                >
                     <div className={css.logo}/>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                         <Menu.Item key="1">

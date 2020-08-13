@@ -3,10 +3,12 @@ import React from "react";
 import Meta from "antd/es/card/Meta";
 import {browserHistory} from "../../gongju/zaxiang";
 import css from './dengluye.module.css'
+import {httpFuwu} from "../../gongju/http.fuwu";
+import {httpjiekou_xitong} from "../../qianhoutongyong/http.jiekou";
 
 export class DengluyeYemian extends React.Component<any, any>
 {
-    private dengluxinxi = {
+    private dengluxinxi: httpjiekou_xitong.denglu.Req = {
         zhanghao: 'ceshi',
         mima: 'ceshi'
     }
@@ -19,7 +21,12 @@ export class DengluyeYemian extends React.Component<any, any>
                     style={{width: 300}}
                     actions={[
                         <Button type="primary" style={{width: '95%'}}
-                                onClick={() => browserHistory.push('/zhuye')}>
+                                onClick={async () =>
+                                {
+                                    let ls = await httpFuwu.xitong_denglu(this.dengluxinxi)
+                                    console.log(ls)
+                                    browserHistory.push('/zhuye')
+                                }}>
                             登录
                         </Button>
                     ]}

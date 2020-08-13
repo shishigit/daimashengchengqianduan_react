@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {DengluyeYemian} from "./page/dengluye/dengluye.yemian";
 import {ZhuyeYemian} from "./page/zhuye/zhuye.yemian";
-import {browserHistory} from "./gongju/gongju";
+import {browserHistory} from "./gongju/zaxiang";
 import {Router, Switch, Redirect, Route} from 'react-router-dom';
 
 export class App extends React.Component<any, any>

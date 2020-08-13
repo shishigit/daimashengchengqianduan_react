@@ -1,7 +1,7 @@
 import {Button, Card, Form, Input} from "antd";
 import React from "react";
 import Meta from "antd/es/card/Meta";
-import {browserHistory} from "../../gongju/gongju";
+import {browserHistory} from "../../gongju/zaxiang";
 import css from './dengluye.module.css'
 
 export class DengluyeYemian extends React.Component<any, any>

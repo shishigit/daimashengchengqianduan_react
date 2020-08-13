@@ -9,8 +9,8 @@ import {httpjiekou_xitong} from "../../qianhoutongyong/http.jiekou";
 export class DengluyeYemian extends React.Component<any, any>
 {
     private dengluxinxi: httpjiekou_xitong.denglu.Req = {
-        zhanghao: 'ceshi',
-        mima: 'ceshi'
+        zhanghao: 'sandianyisiyiwu',
+        mima: 'jjy?123?'
     }
 
     render(): React.ReactNode
@@ -23,8 +23,7 @@ export class DengluyeYemian extends React.Component<any, any>
                         <Button type="primary" style={{width: '95%'}}
                                 onClick={async () =>
                                 {
-                                    let ls = await httpFuwu.xitong_denglu(this.dengluxinxi)
-                                    console.log(ls)
+                                    await httpFuwu.xitong_denglu(this.dengluxinxi)
                                     browserHistory.push('/zhuye')
                                 }}>
                             登录

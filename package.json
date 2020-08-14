@@ -21,7 +21,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "ceshi": "ts-node ./ceshi/ceshi.ts",
+    "ceshi": "ts-node ceshi/ceshi.ts",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
